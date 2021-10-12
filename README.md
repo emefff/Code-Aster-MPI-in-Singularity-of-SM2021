@@ -47,6 +47,7 @@ Unzip and place this directory in /home/
 
 Rename the directory to aster-src--> base directory of Code_Aster sources is now /home/aster-src
 
+Copy above pkginfo.py in /home/aster-src/code_aster/ (only for cosmetical reasons, otherwise version number will be incorrect in SM)
 _________________________________________________________________________________________________________
 Add an overlay to the Singularity container, so data can be written to it:
 
@@ -98,7 +99,8 @@ Now start Salome-Meca 2021 with:
 
 Salome Meca should launch. If you open 'Asterstudy' and click the 'History View' tab, you should be able to choose 'stable_mpi' in the 'version of code_aster' tab:
 
-![Bildschirmfoto vom 2021-10-11 21-30-23](https://user-images.githubusercontent.com/89903493/136846053-bd39bf7f-ca98-4637-b0bb-63ab784fefbc.png)
+![Bildschirmfoto vom 2021-10-12 14-39-48](https://user-images.githubusercontent.com/89903493/136958409-a338627c-867f-4bc8-89d9-b0c707ff6135.png)
+
 
 To achieve a minimum in calculation time we've found the following parameters to be most suitable with the MPI-version:
 
