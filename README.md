@@ -44,6 +44,7 @@ Download the sources of Code_Aster 15.4 from //sourceforge.net/p/codeaster/src/c
 the 'Download Snapshot' Button
 
 Unzip and place this directory in /home/
+
 Rename the directory to aster-src--> base directory of Code_Aster sources is now /home/aster-src
 
 _________________________________________________________________________________________________________
