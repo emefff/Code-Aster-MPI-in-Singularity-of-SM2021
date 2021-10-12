@@ -103,6 +103,7 @@ Salome Meca should launch. If you open 'Asterstudy' and click the 'History View'
 To achieve a minimum in calculation time we've found the following parameters to be most suitable with the MPI-version:
 
 Number of MPI CPU = number_of_cores/2
+
 Number of threads = 2
 
 Please be aware, in systems with more than CPU, these numbers may not be suitable. 
