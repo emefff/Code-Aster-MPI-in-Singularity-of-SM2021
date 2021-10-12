@@ -75,7 +75,7 @@ Singularity> export ASTER_ROOT="${TOOLS}/Code_aster_15_4_0_mpi"
 
 Singularity> cd /home/aster-src
 
-Singularity> ./waf_mpi configure --prefix=${ASTER_ROOT} --disable-petsc --without-hg --install-tests --jobs=4 #(--without-hg is optional if you get an error without it, however we'll have to do further testing)
+Singularity> ./waf_mpi configure --prefix=${ASTER_ROOT} --disable-petsc --without-hg --install-tests --jobs=4 
 
 Singularity> ./waf_mpi build  --jobs=4
 
