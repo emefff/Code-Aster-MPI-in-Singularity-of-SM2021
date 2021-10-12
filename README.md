@@ -85,7 +85,7 @@ Singularity> echo "vers : stable_mpi:/opt/salome_meca/Salome-V2021-s9/tools/Code
 The last command makes the MPI-version accessible within Salome-Meca.
 Now you should be able to launch Salome-Meca within the container, first exit the container shell with:
 
-exit
+Singularity> exit
 ___________________________________________________________________________________________________________
 Launch the Singularity Container of SM 2021 according to the tutorial given on https://www.code-aster.org/V2/spip.php?article303:
 
