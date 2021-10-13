@@ -1,9 +1,18 @@
 # Code-Aster-MPI-in-Singularity-of-SM2021
 
-In this tutorial we will show how to build the MPI Version of Code Aster 15.4 within the Singularity Container of Salome-Meca 2021
+Download container built according to recipe below at https://cloud.sylabs.io/library/emefff/default/code-aster-mpi-in-singularity-of-sm2021
+
+or pull it with
+
+singularity pull library://emefff/default/code-aster-mpi-in-singularity-of-sm2021:1.0 
+
+_______________________________________________________________________________________________________
+
+In the following tutorial we will show how to build the MPI Version of Code Aster 15.4 within the Singularity Container of Salome-Meca 2021
 (a big thank you goes out to Ing. Nicola, a fellow member of the Code_Aster Forum. All the important work was done by him. Thank you! Of course we owe Salome-Meca and Code_Aster to EDF's R&D-Team, www.code-aster.org)
 
 The following steps of this little tutorial were tried and tested on Ubuntu 20.04 LTS.
+
 ________________________________________________________________________________________________________
 Install Singularity following the steps on https://singularity-tutorial.github.io/01-installation/:
 
