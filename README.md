@@ -120,6 +120,8 @@ Number of threads = number_of_cores/2
 
 In any cases, especially on older CPUs, HyperThreading (Intel) or Simultaneous Multi-Threading (AMD) should be turned off. On a given CPU with an average number of cores (e.g. 8 or 10) a speed improvement of roughly 2.5-3 should be attainable in mechanical simulations with the MPI-version.
 
+This container also works on headless machines. It should then choose software rendering automatically. If you log in to a headless machine via ssh, choose -X option on the client side. The GUI will be forwarded to your client.
+
 Have fun,
 
 emefff.
