@@ -88,6 +88,7 @@ Now you should be able to launch Salome-Meca within the container, first exit th
 
 Singularity> exit
 ___________________________________________________________________________________________________________
+
 Launch the Singularity Container of SM 2021 according to the tutorial given on https://www.code-aster.org/V2/spip.php?article303:
 
 singularity run --app install salome_meca-lgpl-2021.0.0-1-20210811-scibian-9.sif
@@ -101,6 +102,9 @@ Salome Meca should launch. If you open 'Asterstudy' and click the 'History View'
 
 ![Bildschirmfoto vom 2021-10-12 14-39-48](https://user-images.githubusercontent.com/89903493/136958409-a338627c-867f-4bc8-89d9-b0c707ff6135.png)
 
+If everything was successful, the Code Aster sources may be deleted:
+
+sudo rm -r /home/aster-src
 
 To achieve a minimum in calculation time we've found the following parameters to be most suitable with the MPI-version:
 
