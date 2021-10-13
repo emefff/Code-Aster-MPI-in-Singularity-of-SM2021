@@ -40,7 +40,7 @@ and place it in your ~/
 This file is about 5.5G in size.
 
 _________________________________________________________________________________________________________
-Download the sources of Code_Aster 15.4 from //sourceforge.net/p/codeaster/src/ci/15.4.0/tree/ via pressing
+Download the sources of Code_Aster 15.4 from https://sourceforge.net/p/codeaster/src/ci/15.4.0/tree/ via pressing
 the 'Download Snapshot' Button
 
 Unzip and place this directory in /home/
