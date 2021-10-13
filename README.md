@@ -31,6 +31,12 @@ make
 
 sudo make install
 
+You may delete both tars now:
+
+cd
+
+rm go1.13.linux-amd64.tar.gz singularity-3.5.3.tar.gz
+
 _________________________________________________________________________________________________________
 Download the Singularity Container of Salome-Meca 2021 from the Code_Aster Homepage www.code-aster.org:
 https://www.code-aster.org/FICHIERS/singularity/salome_meca-lgpl-2021.0.0-1-20210811-scibian-9.sif
