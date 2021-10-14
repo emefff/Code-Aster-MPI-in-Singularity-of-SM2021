@@ -6,7 +6,7 @@ or pull it with
 
 singularity pull library://emefff/default/code-aster-mpi-in-singularity-of-sm2021:1.0 
 
-Due to the naming conventions of cloud.sylabs.io please rename the file to 'salome_meca-lgpl-2021.0.0-1-20210811-scibian-9.sif'. Ohterwise there is a conflict between the filename and the notes within the container.
+Due to the naming conventions of cloud.sylabs.io please rename the file to 'salome_meca-lgpl-2021.0.0-1-20210811-scibian-9.sif'. Otherwise there is a conflict between the filename and the notes within the container.
 
 _______________________________________________________________________________________________________
 
