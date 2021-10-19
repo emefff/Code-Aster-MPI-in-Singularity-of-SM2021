@@ -1,14 +1,19 @@
 # Code-Aster-MPI-in-Singularity-of-SM2021
 
+Updated 19.10.2021 with new original container. Now PETSc is also available.
+
+Created 13.10.2021
+
+________________________________________________________________________________________________________________________________________________
 Download container built according to recipe below at https://cloud.sylabs.io/library/emefff/default/code-aster-mpi-in-singularity-of-sm2021
 
 or pull it with
 
-singularity pull library://emefff/default/code-aster-mpi-in-singularity-of-sm2021:1.0 
+singularity pull library://emefff/default/code-aster-mpi-in-singularity-of-sm2021:code_aster 
+ 
+Due to the naming conventions of cloud.sylabs.io please rename the downloaded container to 'salome_meca-lgpl-2021.0.0-0-20210601-scibian-9.sif'. Otherwise there is a conflict between the filename and the notes within the container.
 
-Due to the naming conventions of cloud.sylabs.io please rename the downloaded container to 'salome_meca-lgpl-2021.0.0-1-20210811-scibian-9.sif'. Otherwise there is a conflict between the filename and the notes within the container.
-
-_______________________________________________________________________________________________________
+________________________________________________________________________________________________________
 
 In the following tutorial we will show how to build the MPI Version of Code Aster 15.4 within the Singularity Container of Salome-Meca 2021
 (a big thank you goes out to Ing. Nicola, a fellow member of the Code_Aster Forum. All the important work was done by him. Thank you! Of course we owe Salome-Meca and Code_Aster to EDF's R&D-Team, www.code-aster.org)
@@ -17,6 +22,8 @@ The following steps of this little tutorial were tried and tested on Ubuntu 20.0
 
 ________________________________________________________________________________________________________
 Install Singularity following the steps on https://singularity-tutorial.github.io/01-installation/:
+
+Note: we assume that newer 3.x versions also work.
 
 sudo apt-get update
 
@@ -50,7 +57,7 @@ rm go1.13.linux-amd64.tar.gz singularity-3.5.3.tar.gz
 
 _________________________________________________________________________________________________________
 Download the Singularity Container of Salome-Meca 2021 from the Code_Aster Homepage www.code-aster.org:
-https://www.code-aster.org/FICHIERS/singularity/salome_meca-lgpl-2021.0.0-1-20210811-scibian-9.sif
+https://www.code-aster.org/FICHIERS/singularity/salome_meca-lgpl-2021.0.0-0-20210601-scibian-9.sif
 
 and place it in your ~/
 
@@ -72,17 +79,17 @@ cd ~
 
 dd if=/dev/zero of=overlay.img bs=1M count=1000 && mkfs.ext3 overlay.img
 
-singularity sif add --datatype 4 --partfs 2 --parttype 4 --partarch 2 --groupid 1 ~/salome_meca-lgpl-2021.0.0-1-20210811-scibian-9.sif overlay.img
+singularity sif add --datatype 4 --partfs 2 --parttype 4 --partarch 2 --groupid 1 salome_meca-lgpl-2021.0.0-0-20210601-scibian-9.sif overlay.img
 
 The overlay.img is not needed anymore:
 rm overlay.img
 
-Your container file salome_meca-lgpl-2021.0.0-1-20210811-scibian-9.sif should now be +1G larger (approx. 6.5G)
+Your container file salome_meca-lgpl-2021.0.0-0-20210601-scibian-9.sif should now be +1G larger (approx. 6.5G)
 
 _________________________________________________________________________________________________________
 Open the container in a shell and bind /home to it:
 
-sudo singularity run --bind  /home:/home -w ~/salome_meca-lgpl-2021.0.0-1-20210811-scibian-9.sif shell
+sudo singularity run --bind  /home:/home -w ~/salome_meca-lgpl-2021.0.0-0-20210601-scibian-9.sif shell
 
 Now execute the following commands to build an install the MPI-Version of Code-Aster 15.4 within the container (denoted by Singularity> prefix):
 
@@ -92,9 +99,9 @@ Singularity> export ASTER_ROOT="${TOOLS}/Code_aster_15_4_0_mpi"
 
 Singularity> cd /home/aster-src
 
-Singularity> ./waf_mpi configure --prefix=${ASTER_ROOT} --disable-petsc --without-hg --install-tests --jobs=4 
+Singularity> ./waf_mpi configure --prefix=${ASTER_ROOT} --without-hg --install-tests --jobs=4 
 
-Singularity> ./waf_mpi build  --jobs=4
+Singularity> ./waf_mpi build --jobs=4
 
 Singularity> ./waf_mpi install
 
@@ -108,12 +115,12 @@ ________________________________________________________________________________
 
 Launch the Singularity Container of SM 2021 according to the tutorial given on https://www.code-aster.org/V2/spip.php?article303:
 
-singularity run --app install salome_meca-lgpl-2021.0.0-1-20210811-scibian-9.sif
+singularity run --app install salome_meca-lgpl-2021.0.0-0-20210601-scibian-9.sif
 
-It is best to run it on a machine with an Nvidia Graphics Card, the more RAM and CPU-cores, the better. Without Nvidia Graphics Cards Software-Rendering will be used (slow 👎).
+It is best to run it on a machine with an Nvidia Graphics Card, the more RAM and CPU-cores, the better. Without Nvidia Graphics Cards Software-Rendering will be used (=slow 👎).
 
 Now start Salome-Meca 2021 with:
-./salome_meca-lgpl-2021.0.0-1-20210811-scibian-9
+./salome_meca-lgpl-2021.0.0-0-20210601-scibian-9
 
 Salome Meca should launch. If you open 'Asterstudy' and click the 'History View' tab, you should be able to choose 'stable_mpi' in the 'version of code_aster' tab:
 
@@ -135,7 +142,7 @@ In the sequential version (which you'll be likely not using anymore :-) ) the fo
 
 Number of threads = number_of_cores/2
 
-In any cases, especially on older CPUs, HyperThreading (Intel) or Simultaneous Multi-Threading (AMD) should be turned off. On a given CPU with an average number of cores (e.g. 8 or 10) a speed improvement of roughly 2.5-3 should be attainable in mechanical simulations with the MPI-version.
+In any cases, especially on older CPUs, HyperThreading (Intel) or Simultaneous Multi-Threading (AMD) should be turned off. On a given CPU with an average number of cores (e.g. 8 or 10) a speed improvement of roughly 2-3 should be attainable in mechanical simulations with the MPI-version compared to the sequential version.
 
 This container also works on headless machines. It should then choose software rendering automatically. If you log on via ssh, choose -X option on the client side. The GUI will be forwarded to your client.
 
