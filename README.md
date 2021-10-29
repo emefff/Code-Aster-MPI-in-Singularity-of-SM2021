@@ -18,7 +18,7 @@ ________________________________________________________________________________
 In the following tutorial we will show how to build the MPI Version of Code Aster 15.4 within the Singularity Container of Salome-Meca 2021
 (a big thank you goes out to Ing. Nicola, a fellow member of the Code_Aster Forum. All the important work was done by him. Thank you! Of course we owe Salome-Meca and Code_Aster to EDF's R&D-Team, www.code-aster.org)
 
-The following steps of this little tutorial were tried and tested on Ubuntu 20.04 LTS.
+The following steps of this little tutorial were tried and tested on Ubuntu 20.04 LTS (desktop and server version).
 
 ________________________________________________________________________________________________________
 Install Singularity following the steps on https://singularity-tutorial.github.io/01-installation/:
@@ -142,7 +142,7 @@ In the sequential version (which you'll be likely not using anymore :-) ) the fo
 
 Number of threads = number_of_cores/2
 
-In any cases, especially on older CPUs, HyperThreading (Intel) or Simultaneous Multi-Threading (AMD) should be turned off. On a given CPU with an average number of cores (e.g. 8 or 10) a speed improvement of roughly 2-3 should be attainable in mechanical simulations with the MPI-version compared to the sequential version.
+In any cases, especially on older CPUs, HyperThreading (Intel) or Simultaneous Multi-Threading (AMD) should be turned off. On a given CPU with an average number of cores (e.g. 8 or 10) a speed improvement of roughly 2-3 should be attainable in mechanical simulations with the MPI-version over the sequential version with OpenMP only.
 
 This container also works on headless machines. It should then choose software rendering automatically. If you log on via ssh, choose -X option on the client side. The GUI will be forwarded to your client.
 
