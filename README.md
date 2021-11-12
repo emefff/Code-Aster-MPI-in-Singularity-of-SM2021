@@ -1,6 +1,6 @@
 # Code-Aster-MPI-in-Singularity-of-SM2021
 
-Updated 19.10.2021 with new original container. Now PETSc is also available.
+Updated 19.10.2021 with new original container (version 2021.0.0). Now PETSc is also available.
 
 Created 13.10.2021
 
