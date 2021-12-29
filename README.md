@@ -117,7 +117,7 @@ Launch the Singularity Container of SM 2021 according to the tutorial given on h
 
 singularity run --app install salome_meca-lgpl-2021.0.0-0-20210601-scibian-9.sif
 
-It is best to run it on a machine with an Nvidia Graphics Card, the more RAM and CPU-cores, the better. Without Nvidia Graphics Cards Software-Rendering will be used (=slow 👎).
+It is best to run it on a machine with an Nvidia Graphics Card, the more RAM and CPU-cores, the better. Without Nvidia Graphics Cards software-rendering will be used (=slow 👎).
 
 Now start Salome-Meca 2021 with:
 ./salome_meca-lgpl-2021.0.0-0-20210601-scibian-9
@@ -136,13 +136,13 @@ Number of MPI CPU = number_of_cores/2
 
 Number of threads = 2
 
-Please be aware, in systems with more than CPU, these numbers may not be suitable. 
+Please be aware, in systems with more than one CPU, these numbers may not be suitable. 
 
 In the sequential version (which you'll be likely not using anymore :-) ) the following parameters are most suitable:
 
 Number of threads = number_of_cores/2
 
-In any cases, especially on older CPUs, HyperThreading (Intel) or Simultaneous Multi-Threading (AMD) should be turned off. On a given CPU with an average number of cores (e.g. 8 or 10) a speed improvement of roughly 2-3 should be attainable in mechanical simulations with the MPI-version over the sequential version with OpenMP only.
+In any cases, especially on older CPUs, HyperThreading (Intel) or Simultaneous Multi-Threading (AMD) should be turned off. On a given CPU with an average number of cores (e.g. 8 or 10) a speed improvement of roughly 2-3 should be attainable in mechanical simulations with the MPI-version over the sequential version with OpenMP only. With older CPUs and if you are behind a strong firewall, you might also want to consider turning Spectre-Meltdown mitigations off to gain some more speed. 
 
 This container also works on headless machines. It should then choose software rendering automatically. If you log on via ssh, choose -X option on the client side. The GUI will be forwarded to your client.
 
