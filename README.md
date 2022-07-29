@@ -1,6 +1,6 @@
 # Code-Aster-MPI-in-Singularity-of-SM2021
 
-29.07.2022 Reupload of inadvertedly deleted container (NO changes made to container, 2 links below changed slightly)
+29.07.2022 Reupload of inadvertently deleted container (NO changes made to container, 2 links below changed slightly)
 
 19.10.2021 update with new original container (version 2021.0.0). Now PETSc is also available.
 
