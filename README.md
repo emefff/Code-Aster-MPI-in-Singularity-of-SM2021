@@ -132,7 +132,7 @@ If everything was successful, the Code Aster sources may be deleted:
 
 sudo rm -r /home/aster-src
 
-To achieve a minimum in calculation time we've found the following parameters to be most suitable with the MPI-version:
+To achieve a minimum in calculation time we've found the following parameters to be most suitable with the MPI-version on an otherwise unoccupied machine (no other task with notable CPU usage):
 
 Number of MPI CPU = number_of_cores/2
 
