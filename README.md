@@ -7,13 +7,7 @@
 13.10.2021 created
 
 ________________________________________________________________________________________________________________________________________________
-Download container built according to recipe below at https://cloud.sylabs.io/library/emefff/collection/code-aster-mpi-in-singularity-of-sm2021
-
-or pull it with
-
-singularity pull --arch amd64 library://emefff/collection/code-aster-mpi-in-singularity-of-sm2021:salome2021 
- 
-Due to the naming conventions of cloud.sylabs.io please rename the downloaded container to 'salome_meca-lgpl-2021.0.0-0-20210601-scibian-9.sif'. Otherwise there is a conflict between the filename and the notes within the container.
+Download container built according to recipe below at .........................
 
 +++++NO LONGER AVAILABLE DUE TO LACK OF FREE SPACE+++++
 
