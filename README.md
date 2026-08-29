@@ -15,6 +15,8 @@ singularity pull --arch amd64 library://emefff/collection/code-aster-mpi-in-sing
  
 Due to the naming conventions of cloud.sylabs.io please rename the downloaded container to 'salome_meca-lgpl-2021.0.0-0-20210601-scibian-9.sif'. Otherwise there is a conflict between the filename and the notes within the container.
 
++++++NO LONGER AVAILABLE DUE TO LACK OF FREE SPACE+++++
++++++PLEASE USE A NEWER VERSION INSTEAD+++++
 ________________________________________________________________________________________________________
 
 In the following tutorial we will show how to build the MPI Version of Code Aster 15.4 within the Singularity Container of Salome-Meca 2021
