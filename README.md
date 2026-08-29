@@ -12,6 +12,8 @@ Download container built according to recipe below at .........................
 +++++NO LONGER AVAILABLE DUE TO LACK OF FREE SPACE+++++
 
 +++++PLEASE USE A NEWER VERSION INSTEAD+++++
+
+SM2025 with CA 17.4.0 MPI (still testing): https://drive.google.com/file/d/1eWxA5U330hh6F_l5Bew_mJ74pYr13QOn/view?usp=drive_link
 ________________________________________________________________________________________________________
 
 In the following tutorial we will show how to build the MPI Version of Code Aster 15.4 within the Singularity Container of Salome-Meca 2021
